@@ -233,6 +233,31 @@ nslookup writefreely.local localhost
 nslookup mysql.local localhost
 ```
 
+##  DNS to perform recursion
+
+**Enable packet forwarding:**
+
+- configuration file /etc/sysctl.conf
+**net.ipv4.ip_forward = 1**
+```
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination CONTAINER_ADDRESS:80
+iptables -A FORWARD -p tcp --dport 3306 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -j ACCEPT
+s iptables -t nat -A POSTROUTING -j MASQUERADE
+```
+
+  - load new configuration:
+***sudo sysctl -p***
+
+```
+adding configuration in /etc/bind/named.conf.options
+  forwarders {
+                 8.8.8.8;
+                 8.8.4.4;
+          };
+```
+
+***sudo service bind9 start***
 
 ***[!IMPORTANT]***
 
