@@ -225,6 +225,12 @@ go to the container a , container b and enter:
 *** ip container lxc *** 
 echo "ip new container name" | sudo tee -a /etc/hosts
 echo "nameserver ip" | sudo tee /etc/resolv.conf
+
+***Test dns Locally:***
+Try querying the DNS server directly in the DNS container:
+
+nslookup writefreely.local localhost
+nslookup mysql.local localhost
 ```
 
 
