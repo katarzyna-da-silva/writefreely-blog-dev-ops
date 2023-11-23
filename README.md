@@ -226,3 +226,32 @@ go to the container a , container b and enter:
 echo "ip new container name" | sudo tee -a /etc/hosts
 echo "nameserver ip" | sudo tee /etc/resolv.conf
 ```
+
+
+***[!IMPORTANT]***
+
+important commands:
+
+
+```
+systemctl start application.service
+
+systemctl stop application.service
+
+sudo systemctl restart application.service
+
+sudo systemctl reload application.service
+
+sudo systemctl reload-or-restart application.service
+
+sudo systemctl enable application.service
+
+systemctl status application.service
+
+systemctl list-units
+
+systemctl daemon-reload
+
+sudo reboot
+
+```
