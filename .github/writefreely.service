@@ -1,0 +1,15 @@
+[Unit]
+Description=Write Freely Instance
+After=network.target
+
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=journal
+WorkingDirectory=/var/www/writefreely
+ExecStart=/var/www/writefreely/writefreely
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
