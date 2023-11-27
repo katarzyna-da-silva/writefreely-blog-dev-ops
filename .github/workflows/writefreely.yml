@@ -1,19 +1,33 @@
-name: Confirm Push
+name: LXD Connect Containers
 
-on: [push]
+on:
+  
+  
+push:
+    branches:
+      - main
 
 jobs:
-
-  deploy:
-
-    runs-on: self-hosted
+  connect-containers:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Run push confirmationnn
+    - name: Checkout Repository
+      
+ 
+uses: actions/checkout@v2
+
+    - name: Connect Containers
       run: |
-        cowsay "rien ne fonctionne encore ici!"
+        # ip containers lxc list 
+        CONTAINER_1_IP=10.42.42.98
+        CONTAINER_2_IP=10.42.42.190
+        CONTAINER_3_IP=10.42.42.51
 
+        # iptables -L -n -v 
+        CONTAINER_1_PORT=8081
+        CONTAINER_2_PORT=8082
+        CONTAINER_3_PORT=8083
 
-    - name: Checkout
-      uses: actions/checkout@v4
-
+        # writefreely 
+        http://katarzyna-da-silva-server.eddi.cloud/
