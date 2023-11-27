@@ -1,0 +1,19 @@
+name: Confirm Push
+
+on: [push]
+
+jobs:
+
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Run push confirmationnn
+      run: |
+        cowsay "rien ne fonctionne encore ici!"
+
+
+    - name: Checkout
+      uses: actions/checkout@v4
+
