@@ -1,9 +1,6 @@
 name: LXD Connect Containers
-
 on:
-  
-  
-push:
+  push:
     branches:
       - main
 
@@ -26,11 +23,11 @@ jobs:
         CONTAINER_2_PORT=8080
         CONTAINER_3_PORT=3306
 
-    - name: Configure iptabless
+    - name: Configure iptables
       run: |
         sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
         sudo iptables -A INPUT -p udp --dport 53 -j ACCEPT
         sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
         
         # writefreely 
-        http://katarzyna-da-silva-server.eddi.cloud/
+        echo "http://katarzyna-da-silva-server.eddi.cloud/"
