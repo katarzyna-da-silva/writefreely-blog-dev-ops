@@ -12,7 +12,7 @@ jobs:
     - name: Checkout Repository
     uses: actions/checkout@v4
 
-    - name: Connect Containers
+    - name: connect-containers
       run: |
         # ip containers lxc list 
         CONTAINER_1_IP=10.42.42.98
@@ -30,4 +30,4 @@ jobs:
         sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
         
         # writefreely 
-        echo "http://katarzyna-da-silva-server.eddi.cloud/"
+        echo "http://katarzyna-da-silva-server.eddi.cloud"
