@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-    jobs:
+jobs:
   connect-containers:
     runs-on: ubuntu-latest
 
