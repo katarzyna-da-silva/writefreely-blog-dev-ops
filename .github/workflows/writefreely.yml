@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-jobs:
+    jobs:
   connect-containers:
     runs-on: ubuntu-latest
 
@@ -17,9 +17,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y cowsay
-    - name: Ensure Apache2 is running in LXD container
-      run: |
-            lxc exec application-web -- sudo systemctl is-active apache2 || lxc exec application-web -- sudo systemctl start apache2
     - name: connect-containers
       run: |
         # ip containers lxc list 
