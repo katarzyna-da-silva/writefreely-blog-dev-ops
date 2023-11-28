@@ -297,7 +297,7 @@ sudo reboot
 ```
 setting = runners = action
 
-an important command that will start actions runner and create the service:
+important command that will start actions runner and create the service:
 
 sudo ./svc.sh install
 
