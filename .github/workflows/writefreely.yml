@@ -29,11 +29,11 @@ jobs:
         CONTAINER_2_PORT=8080
         CONTAINER_3_PORT=3306
 
-    - name: Configure iptables
-      run: |
-        sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-        sudo iptables -A INPUT -p udp --dport 53 -j ACCEPT
-        sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+        # - name: Configure iptables
+        # run: |
+        #sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+        #sudo iptables -A INPUT -p udp --dport 53 -j ACCEPT
+        #sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
         
         # cowsay
         cowsay "Cowsay is installed it works!!"
