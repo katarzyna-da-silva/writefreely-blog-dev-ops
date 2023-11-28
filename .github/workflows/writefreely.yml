@@ -13,10 +13,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
     
-    - name: Install cowsay and xdg-utils
+    - name: Install cowsay
       run: |
         sudo apt-get update
-        sudo apt-get install -y cowsay xdg-utils
+        sudo apt-get install -y cowsay
 
     - name: connect-containers
       run: |
@@ -36,7 +36,7 @@ jobs:
         sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
         
         # cowsay
-        cowsay "Cowsay is installed!"
+        cowsay "Cowsay is installed it works!!"
 
         # webpage
-        xdg-open "http://katarzyna-da-silva-server.eddi.cloud"
+        curl -s "http://katarzyna-da-silva-server.eddi.cloud"
