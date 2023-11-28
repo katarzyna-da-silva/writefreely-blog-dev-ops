@@ -24,7 +24,7 @@ uses: actions/checkout@v4
         CONTAINER_2_IP=10.42.42.190
         CONTAINER_3_IP=10.42.42.51
 
-        # iptables -L -n -v 
+        # iptables-L-n-v 
         CONTAINER_1_PORT=80
         CONTAINER_2_PORT=8080
         CONTAINER_3_PORT=3306
