@@ -286,3 +286,22 @@ systemctl daemon-reload
 sudo reboot
 
 ```
+
+
+
+***github actions runner and adding containers:***
+
+***download the repo to vm or locally***
+***on github:***
+***follow the installation instructions:***
+```
+setting = runners = action
+
+an important command that will start actions runner and create the service:
+
+sudo ./svc.sh install
+
+ready!
+
+go to github and press the action button!
+```
