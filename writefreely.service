@@ -7,7 +7,7 @@ Type=simple
 StandardOutput=journal
 StandardError=journal
 WorkingDirectory=/var/www/writefreely
-ExecStart=/var/www/writefreely/writefreely
+ExecStart=/app/writefreely/writefreely
 
 Restart=always
 

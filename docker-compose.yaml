@@ -1,0 +1,29 @@
+version: '3.8'
+ 
+  # service et config pour mysql et writefreely apres installation
+services:
+  db: 
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: writefreely
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 1234
+    ports:
+     - "3306:3306"
+    
+ # build = image writefreely .Dockerfile
+  writefreely:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=writefreely
+      - DB_USER=admin
+      - DB_PASSWORD=1234
+
